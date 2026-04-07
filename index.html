@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Registry - Global MCP & A2A Management</title>
+    <meta name="description" content="A global registry for managing MCP servers and A2A agents, controlling their registration, health, and discoverability.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%23EB1700%22 /></svg>">
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <span class="logo-text">Agent Registry</span>
+                <span class="logo-subtitle">for MCP and A2A system</span>
+            </div>
+            <div class="nav-links">
+                <!-- Add navigation items here if needed -->
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg-motif">
+                <div class="circle circle-1"></div>
+                <div class="circle circle-2"></div>
+                <div class="circle circle-3"></div>
+                <div class="circle circle-4"></div>
+                <div class="circle circle-5"></div>
+            </div>
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1>Agent Registry <span>Unified Hub</span></h1>
+                    <h2>For MCP and A2A system nodes</h2>
+                    <p>Connect, discover, and securely manage your AI agent infrastructure. The most advanced registry for the Savant ecosystem.</p>
+                    <button class="cta-button" id="contact-btn">Explore Registry</button>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="dashboard.png" alt="Savant Registry Dashboard" class="dashboard-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Features Section -->
+        <section class="features">
+            <div class="blueprint-grid"></div>
+            <!-- Decorative particles -->
+            <div class="floating-particle" style="top: 10%; left: 5%; width: 30px; height: 30px;"></div>
+            <div class="floating-particle" style="top: 60%; left: 80%; width: 50px; height: 50px;"></div>
+            <div class="floating-particle" style="top: 80%; left: 15%; width: 20px; height: 20px;"></div>
+
+            <div class="container" style="position: relative; z-index: 2;">
+                <h2 class="section-title">Core Features & Capabilities</h2>
+                <div class="features-grid">
+                    
+                    <!-- Card 1: MCP Registry -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <!-- MCP Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699-2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+                              </svg>
+                        </div>
+                        <h3>MCP Registry</h3>
+                        <p>A govern registry for HTTPS/SSE & Streamable HTTP servers.</p>
+                    </div>
+
+                    <!-- Card 2: A2A Agent -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 13c-2.287 0-4.35.961-5.808 2.5A7.98 7.98 0 0 0 12 20a7.98 7.98 0 0 0 5.807-2.5A7.98 7.98 0 0 0 12 15m.47-9.68a.506.506 0 0 0-.94 0l-.254.61a4.37 4.37 0 0 1-2.25 2.327l-.718.32a.53.53 0 0 0 0 .962l.76.338a4.37 4.37 0 0 1 2.22 2.25l.245.566c.18.414.753.414.934 0l.247-.565a4.36 4.36 0 0 1 2.219-2.251l.76-.338a.53.53 0 0 0 0-.963l-.718-.32a4.37 4.37 0 0 1-2.251-2.325z"/></svg>
+                        </div>
+                        <h3>A2A Agent</h3>
+                        <p>(HTTP Only)</p>
+                    </div>
+
+                </div>
+
+                <!-- Features Summary Paragraph -->
+                <div class="features-summary">
+                    <p>The registry supports registration of two node types — <strong>HTTP/SSE/Streamable HTTP</strong> and <strong>A2A Agent (HTTP Only)</strong>. Key capabilities include <strong>Automated Health Checks</strong> [Pre-Registration, Background, and Manual], <strong>Metadata/Specification Discovery</strong>, <strong>Change Detection</strong>, and a <strong>Full Audit</strong> of all actions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Node Lifecycle Section -->
+        <section class="lifecycle" id="lifecycle-section">
+            <div class="lifecycle-sticky">
+                <div class="lifecycle-content">
+                    <h2>Node Lifecycle State</h2>
+                    <div class="intro-text-wrapper">
+                        <p class="intro-text active" id="intro-1">A node moves through three distinct states.</p>
+                        <p class="intro-text" id="intro-2">With health checkup tracked separately as unknown</p>
+                    </div>
+                    
+                    <!-- Real-time Mock Card -->
+                    <div class="mock-card-container">
+                        <div class="mock-card">
+                            <div class="mock-card-header">
+                                <div class="mock-card-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 1.1.9 2 2 2h12a2 2 0 002-2V7M4 7c0-1.1.9-2 2-2h12a2 2 0 012 2M4 7h16M11 11h2m-2 4h2" />
+                                    </svg>
+                                </div>
+                                <div class="mock-card-info">
+                                    <div class="mock-card-title-row">
+                                        <span class="mock-card-title">smoke-node-1775563176</span>
+                                        <svg class="mock-card-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </div>
+                                    <div class="mock-card-tags">
+                                        <span class="tag tag-version">v1.0.0</span>
+                                        <span class="tag tag-mcp">MCP</span>
+                                        <span class="tag tag-state pending" id="mock-card-state">PENDING</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mock-card-body">
+                                <p>Smoke test node created by smoke_test_combined</p>
+                            </div>
+                            <div class="mock-card-footer">
+                                <div class="footer-left">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                                    </svg>
+                                    <span>2</span>
+                                </div>
+                                <div class="footer-right">
+                                    <span>smoke</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="state-pill-container">
+                        <div id="lifecycle-pill" class="state-pill pending">Pending</div>
+                    </div>
+
+                    <div class="footer-text">
+                        <p>A node must be both <strong>approved</strong> and <strong>enabled</strong> to be searchable. If a specification change is detected, the node moves into the <strong>In-Review</strong> status automatically until an administrator makes a decision.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Onboarding Section -->
+        <section class="onboarding" id="onboarding-flow">
+            <div class="container onboarding-grid">
+                
+                <!-- Left: Dashboard Screenshot Sequence -->
+                <div class="onboarding-image-container">
+                    <img src="step1.png" alt="Onboarding Step" class="onboarding-image" id="step-img">
+                </div>
+
+                <!-- Right: Content & Navigation -->
+                <div class="onboarding-content" id="step-content">
+                    <span class="step-indicator">Step 1 of 5</span>
+                    <h2>Onboarding</h2>
+                    <h3>Fill in the Details</h3>
+                    <p>Provide the essential information for your server or agent, including the name, version, and type. This ensures your node is accurately represented in the Savant Agent Registry.</p>
+                    
+                    <div class="onboarding-nav">
+                        <button class="nav-btn prev" id="prev-btn" disabled>Previous</button>
+                        <button class="nav-btn next" id="next-btn">Next Step</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Admin Control Section -->
+        <section class="admin-control">
+            <div class="container">
+                <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                    <h2 class="section-title" style="margin-bottom: 1rem;">Admin Control</h2>
+                    <p style="font-size: 1.25rem; color: var(--text-color);">Command and control your registry with fine-grained administrative tools. Manage node submissions, toggle visibility, and execute health audits in real-time.</p>
+                </div>
+
+                <div class="admin-grid">
+                    
+                    <!-- Card 1: Approval Workflow -->
+                    <div class="admin-card" id="card-approve">
+                        <div>
+                            <div class="admin-icon-box">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                </svg>
+                            </div>
+                            <h3>Submission Management</h3>
+                            <p>Admins can instantly approve or reject incoming MCP server and A2A agent registrations.</p>
+                        </div>
+                        <div class="admin-actions">
+                            <button class="admin-btn admin-btn-approve" id="btn-approve-demo">Approve</button>
+                            <button class="admin-btn admin-btn-reject" id="btn-reject-demo">Reject</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Visibility Toggle -->
+                    <div class="admin-card">
+                        <div>
+                            <div class="admin-icon-box">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                </svg>
+                            </div>
+                            <h3>Visibility Control</h3>
+                            <p>Toggle node visibility to the public registry. Enable or disable servers with a single click.</p>
+                        </div>
+                        <div class="switch-container">
+                            <span id="visibility-status" style="font-weight: 600; color: #56ab2f;">Visible</span>
+                            <label class="switch">
+                                <input type="checkbox" checked id="visibility-toggle">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Health Audit -->
+                    <div class="admin-card" id="card-audit">
+                        <div class="audit-stage-1" id="audit-init">
+                            <div class="admin-icon-box">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                                </svg>
+                            </div>
+                            <h3>Active Health Audit</h3>
+                            <p>Execute manual health checks to ensure server endpoints are responsive and compliant.</p>
+                            <button class="admin-btn admin-btn-outline" id="btn-run-audit">Run Health Check</button>
+                        </div>
+                        <div class="audit-stage-2" id="audit-result">
+                            <div class="healthy-badge">SYSTEM HEALTHY</div>
+                            <p style="margin-top: 1rem; text-align: center;">Last checked: Just now</p>
+                            <button class="admin-btn admin-btn-outline" style="margin-top: 1rem;" id="btn-reset-audit">Reset</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Node Info -->
+                    <div class="admin-card">
+                        <div>
+                            <div class="admin-icon-box">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                                </svg>
+                            </div>
+                            <h3>Registry Insights</h3>
+                            <p>Monitor technical specifications and detected changes across your server fleet.</p>
+                        </div>
+                        <div style="background: #f8f9fa; padding: 1rem; border-radius: 10px; font-size: 0.85rem; border: 1px solid #eee;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <span>Status:</span>
+                                <span style="color: #56ab2f; font-weight: 700;">Healthy</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>Changes:</span>
+                                <span style="color: #666;">No detected changes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Roles & Permissions Section -->
+        <section class="roles">
+            <div class="container">
+                <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                    <h2 class="section-title">Registry Roles & Permissions</h2>
+                </div>
+
+                <div class="roles-grid">
+                    
+                    <!-- Admin Role -->
+                    <div class="role-card">
+                        <div class="role-header">
+                            <h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" /></svg>
+                                Super Admin
+                            </h3>
+                            <span class="role-badge badge-admin">Full Access</span>
+                        </div>
+                        <ul class="role-list">
+                            <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg> Full Node Lifecycle Management</li>
+                            <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg> Critical Metadata Overrides</li>
+                            <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg> System-Wide Configuration</li>
+                            <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg> Advanced Security Audits</li>
+                            <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg> Registry-Level Maintenance</li>
+                        </ul>
+                    </div>
+
+                    <!-- Moderator Role -->
+                    <div class="role-card">
+                        <div class="role-header">
+                            <h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m0-10.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75A11.959 11.959 0 0 1 12 2.714Z" /></svg>
+                                Moderator
+                            </h3>
+                            <span class="role-badge badge-mod">Operations</span>
+                        </div>
+                        <ul class="role-list">
+                            <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg> Approve/Reject New Submissions</li>
+                            <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg> Execute Manual Health Checks</li>
+                            <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg> Toggle Public Node Visibility</li>
+                            <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg> Monitor Specification Changes</li>
+                            <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg> Managed Node Take-Downs</li>
+                        </ul>
+                    </div>
+
+                    <!-- Standard User -->
+                    <div class="role-card">
+                        <div class="role-header">
+                            <h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" /></svg>
+                                Standard User
+                            </h3>
+                            <span class="role-badge badge-user">Discovery</span>
+                        </div>
+                        <ul class="role-list">
+                            <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg> Read-Only Registry Discovery</li>
+                            <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg> Search across entire Node fleet</li>
+                            <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg> Verify Technical Specifications</li>
+                            <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg> Analyze Node Health History</li>
+                            <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg> Request Node Registrations</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container" style="padding: 2rem 0; text-align: center; color: #999; font-size: 0.9rem;">
+            &copy; 2026 Savant Registry. All rights reserved.
+        </div>
+    </footer>
+
+    <style>
+        /* ... previous header/logo styles ... */
+        header {
+            padding: 2rem 0;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+        
+        .logo {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: #333;
+            line-height: 1.1;
+        }
+
+        .logo-subtitle {
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: #565656;
+            letter-spacing: 0.5px;
+        }
+
+        .logo::before {
+            content: "A";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 36px;
+            height: 36px;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1.4rem;
+            border-radius: 8px;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); /* Hexagon-like shape */
+        }
+    </style>
+
+    <script>
+        const contactBtn = document.getElementById('contact-btn');
+        contactBtn.addEventListener('click', () => {
+            alert('Thank you for your interest in Savant Agent Registry! Connecting you with the registry explorer...');
+        });
+
+        // Lifecycle Scroll Logic
+        const lifecycleSection = document.getElementById('lifecycle-section');
+        const lifecyclePill = document.getElementById('lifecycle-pill');
+        const intro1 = document.getElementById('intro-1');
+        const intro2 = document.getElementById('intro-2');
+        const mockCardState = document.getElementById('mock-card-state');
+
+        // Pill State Transitions on Click
+        const states = [
+            { text: 'Pending', cssClass: 'state-pill pending', mockCss: 'tag tag-state pending', glo: 'rgba(255, 183, 94, 0.12)', introIdx: 1 },
+            { text: 'Rejected', cssClass: 'state-pill rejected', mockCss: 'tag tag-state rejected', glo: 'rgba(235, 23, 0, 0.12)', introIdx: 1 },
+            { text: 'Approved', cssClass: 'state-pill approved', mockCss: 'tag tag-state approved', glo: 'rgba(86, 171, 47, 0.12)', introIdx: 1 },
+            { text: 'Unhealthy', cssClass: 'state-pill unhealthy', mockCss: 'tag tag-state unhealthy', glo: 'rgba(157, 59, 0, 0.12)', introIdx: 2 },
+            { text: 'Healthy', cssClass: 'state-pill healthy', mockCss: 'tag tag-state healthy', glo: 'rgba(86, 171, 47, 0.12)', introIdx: 2 }
+        ];
+
+        let currentStateIdx = 0;
+
+        lifecyclePill.addEventListener('click', () => {
+            // Advance to next state
+            currentStateIdx = (currentStateIdx + 1) % states.length;
+            const state = states[currentStateIdx];
+            
+            // Text Swapping Logic
+            if (state.introIdx === 2) {
+                intro1.classList.remove('active');
+                intro2.classList.add('active');
+            } else {
+                intro1.classList.add('active');
+                intro2.classList.remove('active');
+            }
+
+            // Pill Update
+            lifecyclePill.textContent = state.text;
+            lifecyclePill.className = state.cssClass;
+            
+            // Mock Card Update
+            mockCardState.textContent = state.text.toUpperCase();
+            mockCardState.className = state.mockCss;
+            
+            document.documentElement.style.setProperty('--lifecycle-glow', state.glo);
+        });
+
+        // Onboarding Stepper Logic
+        const steps = [
+            {
+                title: "Fill in the Details",
+                desc: "Fill out the required details in the form to register your MCP server or A2A agent. This includes defining the node type, name, and version.",
+                img: "step1.png"
+            },
+            {
+                title: "Run a Health Check",
+                desc: "After providing all details, a mandatory health check is required to ensure your server or agent is ready. This is an automated process to verify compatibility.",
+                img: "step2.png"
+            },
+            {
+                title: "Technical Configuration",
+                desc: "Configure the server's endpoint and authentication details to ensure the registry can securely communicate with your node.",
+                img: "dashboard.png" // Fallback to main dashboard for other steps for now
+            },
+            {
+                title: "Define Capabilities",
+                desc: "Select the specific tools and functionalities your MCP server or A2A agent provides to the registry.",
+                img: "dashboard.png"
+            },
+            {
+                title: "Review & Submit",
+                desc: "Finalize the registration by reviewing all provided details. Once confirmed, your node will be live in the Savant Agent Registry.",
+                img: "dashboard.png"
+            }
+        ];
+
+        let currentStep = 0;
+        const stepImg = document.getElementById('step-img');
+        const stepContent = document.getElementById('step-content');
+        const nextBtn = document.getElementById('next-btn');
+        const prevBtn = document.getElementById('prev-btn');
+
+        function updateStep(index) {
+            currentStep = index;
+            const step = steps[index];
+
+            // Re-trigger animation
+            stepContent.style.animation = 'none';
+            stepContent.offsetHeight; /* trigger reflow */
+            stepContent.style.animation = 'fadeIn 0.5s ease';
+
+            // Update content
+            stepContent.querySelector('.step-indicator').textContent = `Step ${index + 1} of 5`;
+            stepContent.querySelector('h3').textContent = step.title;
+            stepContent.querySelector('p').textContent = step.desc;
+            
+            // Fade image
+            stepImg.style.opacity = '0';
+            setTimeout(() => {
+                stepImg.src = step.img;
+                stepImg.style.opacity = '1';
+            }, 250);
+
+            // Update buttons
+            prevBtn.disabled = index === 0;
+            nextBtn.textContent = index === steps.length - 1 ? 'Finish' : 'Next Step';
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (currentStep < steps.length - 1) {
+                updateStep(currentStep + 1);
+            } else {
+                alert('Onboarding complete! You are ready to manage your registry.');
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentStep > 0) {
+                updateStep(currentStep - 1);
+            }
+        });
+
+        // Admin Control Interactions
+        
+        // 1. Approval Logic
+        const cardApprove = document.getElementById('card-approve');
+        document.getElementById('btn-approve-demo').addEventListener('click', () => {
+            cardApprove.classList.remove('glow-danger');
+            cardApprove.classList.add('glow-success');
+            setTimeout(() => cardApprove.classList.remove('glow-success'), 2000);
+        });
+        document.getElementById('btn-reject-demo').addEventListener('click', () => {
+            cardApprove.classList.remove('glow-success');
+            cardApprove.classList.add('glow-danger');
+            setTimeout(() => cardApprove.classList.remove('glow-danger'), 2000);
+        });
+
+        // 2. Visibility Toggle
+        const visibilityToggle = document.getElementById('visibility-toggle');
+        const visibilityStatus = document.getElementById('visibility-status');
+        visibilityToggle.addEventListener('change', (e) => {
+            if (e.target.checked) {
+                visibilityStatus.textContent = 'Visible';
+                visibilityStatus.style.color = '#56ab2f';
+            } else {
+                visibilityStatus.textContent = 'Hidden';
+                visibilityStatus.style.color = '#EB1700';
+            }
+        });
+
+        // 3. Health Audit Logic
+        const auditInit = document.getElementById('audit-init');
+        const auditResult = document.getElementById('audit-result');
+        document.getElementById('btn-run-audit').addEventListener('click', () => {
+            auditInit.style.opacity = '0';
+            setTimeout(() => {
+                auditInit.style.display = 'none';
+                auditResult.style.display = 'flex';
+            }, 300);
+        });
+        document.getElementById('btn-reset-audit').addEventListener('click', () => {
+            auditResult.style.display = 'none';
+            auditInit.style.display = 'block';
+            setTimeout(() => {
+                auditInit.style.opacity = '1';
+            }, 50);
+        });
+    </script>
+
+</body>
+</html>
